@@ -1,7 +1,4 @@
 from django.conf.urls import url, include
-from django.contrib import admin
-from Aban.views import *
-from Aban import views
 from spyne.protocol.soap import Soap11
 from spyne.server.django import DjangoView
 
