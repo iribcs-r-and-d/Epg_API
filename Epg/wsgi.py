@@ -21,6 +21,3 @@ class MyService(WSRoot):
 ws = MyService(protocols=['restjson', 'restxml', 'soap'])
 application = ws.wsgiapp()
 
-#os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Epg.settings')
-
-#application = get_wsgi_application()
