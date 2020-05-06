@@ -2,6 +2,8 @@
 # encoding: utf8
 #
 # Copyright © BJ Cardon <bj dot car dot don at gmail dot com>,
+# Copyright © KavehRS <gitlab.com/kavehrs>,
+
 # All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
