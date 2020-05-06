@@ -1,8 +1,8 @@
 import os
 from wsme import WSRoot, expose
-from Aban.views import NoteAPIView
+from Aban.models import Note
 
-class NoteAPIView(WSRoot):
+class Note(WSRoot):
     @expose(unicode, unicode) 
 
 ws=NoteAPIView(protocols=['restjson', 'restxml', 'soap'])
