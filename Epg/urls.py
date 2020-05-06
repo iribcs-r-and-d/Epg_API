@@ -21,7 +21,5 @@ from spyne.protocol.soap import Soap11
 from spyne.server.django import DjangoView
 
 urlpatterns = [
-    url(r'^admin/', admin.site.urls),
     url('Data/', NoteAPIView.as_view(services={NoteAPIView}, in_protocol=Soap11(validator='lxml'), out_protocol=Soap11())),
-    url(r'^api/', DjangoView.as_view(application=app)),
 ]
