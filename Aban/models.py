@@ -1,15 +1,12 @@
 
 from django.core.validators import MinLengthValidator, MaxLengthValidator
 from django.db import models
-from tastypie.resources import ModelResource
-from tastypie.authorization import Authorization
 from rest_framework import generics
 from django_filters.rest_framework import DjangoFilterBackend
 from rest_framework import filters
 from .serializers import NoteSerializer
 from rest_framework.decorators import api_view
 from django.views.decorators.csrf import csrf_exempt
-
 from django.core.exceptions import ValidationError
 from django.db.utils import IntegrityError
 # Create your models here.
