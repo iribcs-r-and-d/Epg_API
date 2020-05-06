@@ -19,7 +19,6 @@ from Aban.views import *
 from Aban import views
 from spyne.protocol.soap import Soap11
 from spyne.server.django import DjangoView
-from rpctest.core.views import *
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
