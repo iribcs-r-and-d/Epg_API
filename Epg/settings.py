@@ -33,7 +33,6 @@
 # Django settings for rpctest project.
 
 import os
-import tempfile
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -48,7 +47,7 @@ SECRET_KEY = 'f%_qc)hoo$vox9lsad@c-*dkl9+xbt&fw23j$(bv^a71&u4#0&'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['10.32.141.17','91.225.54.111']
+ALLOWED_HOSTS = ['10.32.141.17','91.225.54.111', 'localhost']
 
 
 # Application definition
@@ -60,7 +59,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'django_filters',
     'Aban'
 ]
 
@@ -92,21 +90,17 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Epg.wsgi.application'
-
-
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
 DATABASES = {
     'default': {
-        'ENGINE': 'sql_server.pyodbc',
-        'NAME': 'Aban_note',
-        'HOST': 'WIN-9R9NEQHJ1UC',
-        'PORT': '',
-        'OPTIONS': {
-            'driver': 'SQL Server Native Client 11.0',
-        }
+        'ENGINE': 'django.db.backends.sqlite3', # Add 'postgresql_psycopg2', 'postgresql', 'mysql', 'sqlite3' or 'oracle'.
+        'NAME': 'Aban_note',                      # Or path to database file if using sqlite3.
+        'USER': '',                      # Not used with sqlite3.
+        'PASSWORD': '',                  # Not used with sqlite3.
+        'HOST': '',                      # Set to empty string for localhost. Not used with sqlite3.
+        'PORT': '',                      # Set to empty string for default. Not used with sqlite3.
     }
 }
 

@@ -1,8 +1,8 @@
-from django.conf.urls import url, include
-from spyne.protocol.soap import Soap11
+from django.conf.urls import url
 from spyne.server.django import DjangoView
-from Aban.models import NoteAPIView
+from Aban.views import Epg_service, app
 
 urlpatterns = [
-    url('/Data/', NoteAPIView.as_view(services={NoteAPIView}, in_protocol=Soap11(validator='lxml'), out_protocol=Soap11())),
+    url(r'^data/', Epg_service),
+    url(r'^api/', DjangoView.as_view(application=app)),
 ]
