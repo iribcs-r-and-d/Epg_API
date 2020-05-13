@@ -2,9 +2,9 @@ from django.db import models
 
 
 class Note(models.Model):
-    channel = models.CharField(max_length=200)
-    program = models.CharField(max_length=200)
+    channel = models.CharField()
+    program = models.CharField()
     start_date = models.DateTimeField()
     duration = models.IntegerField()
-    visit = models.IntegerField(max_length=200)
-    month = models.CharField(max_length=200)
+    visit = models.IntegerField()
+    month = models.CharField()
