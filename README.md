@@ -18,7 +18,8 @@ Installation Guide:
     .\epg-env\scripts\activate
 
 or in Linux :
-  source epg-env/bin/activate
+
+     source epg-env/bin/activate
 
 3- Install requirements:
 
